@@ -16,7 +16,7 @@ public class RegistrationPage {
     }
 
     //Enter Account Infromation Locators
-    By enterAccountInfoText = By.xpath("(//h2[@class='title text-center'])[1]");
+    By enterAccountInfoText = By.xpath("(By.xpath(\"//b[contains(text(),'Enter Account Information')]\");");
     private By maleTitle = By.id("id_gender1");
     private By femaleTitle = By.id("id_gender2");
     private By password = By.id("password");
