@@ -6,7 +6,10 @@ on:
       testsPath:
         description: 'Path to Tests to be Executed'
         default: 'Registration_tests/RegistrationAndDeletionOfAccount.java'
-
+        
+  pull_request:
+    branches:
+      - main
 
 jobs:
   Remote_Tests_Execution:
