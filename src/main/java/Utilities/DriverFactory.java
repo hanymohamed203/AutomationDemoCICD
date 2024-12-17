@@ -18,6 +18,13 @@ public class DriverFactory {
             driver = new ChromeDriver(options);
             System.out.println("intializing Chrome Browser on OS : "+System.getProperty("os.name")+"and the version is "+System.getProperty("os.version"));
         }
+        else if (browserName.equalsIgnoreCase("chrome")&& headless==true) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            System.out.println("the chrome browser will run in headless");
+            driver = new ChromeDriver(options);
+            System.out.println("intializing Chrome Browser on OS : "+System.getProperty("os.name")+"and the version is "+System.getProperty("os.version"));
+        }
         else if (browserName.equalsIgnoreCase("chrome") ) {
             System.out.println("intializing Chrome Browser on OS : " + System.getProperty("os.name") + "and the version is " + System.getProperty("os.version"));
             driver=new ChromeDriver();
