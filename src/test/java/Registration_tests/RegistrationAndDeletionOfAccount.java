@@ -29,7 +29,7 @@ public class RegistrationAndDeletionOfAccount {
     @Description("Set up the browser")
     public void set_up() {
         PropertiesReader.loadProperties();
-        driver= DriverFactory.initiateDriver(System.getProperty("browserName"), Boolean.parseBoolean(System.getProperty("MaximizeWindow")), Boolean.parseBoolean(System.getProperty("headless")));
+        driver= DriverFactory.initiateDriver(System.getProperty("browserName"), Boolean.parseBoolean(System.getProperty("MaximizeWindow")), Boolean.parseBoolean(System.getProperty("Headless")));
         jsonFileManager = new JsonFileManager("src/test/resources/JsonData.json");
     }
 
