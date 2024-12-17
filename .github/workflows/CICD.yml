@@ -95,5 +95,7 @@ jobs:
           path: 'target/surefire-reports/TEST-*.xml'
           reporter: java-junit
 
+          #Test push request
+
 
 
