@@ -33,7 +33,7 @@ jobs:
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4.5
         with:
-          maven-version: 3.9.6
+          maven-version: 3.9.9
 
       - name: Run Tests
         continue-on-error: true
@@ -73,7 +73,7 @@ jobs:
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4.5
         with:
-          maven-version: 3.9.6
+          maven-version: 3.9.9
 
       - name: Run Tests in Headless in chrome
         continue-on-error: true
