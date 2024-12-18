@@ -8,7 +8,7 @@ on:
         default: 'Registration_tests/RegistrationAndDeletionOfAccount.java'
 
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/2 * * * *'
     
   pull_request:
     description: ' test after pull request '
