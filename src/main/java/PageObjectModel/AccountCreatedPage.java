@@ -12,16 +12,12 @@ public class AccountCreatedPage  {
     WebDriver driver;
     private By accountCreatedMessage = By.xpath("//h2[@data-qa='account-created']");
     private By continueButton = By.cssSelector("a[data-qa=continue-button]");
-
     String AccountCreatedPageUrl="https://automationexercise.com/account_created";
-
     public AccountCreatedPage(WebDriver driver) {
         this.driver = driver;
     }
-
     public AccountCreatedPage Navigate()
     {
-
         BrowserActions.navigate(driver,AccountCreatedPageUrl);
         return this;
     }

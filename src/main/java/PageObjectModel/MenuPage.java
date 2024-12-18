@@ -29,7 +29,5 @@ public class MenuPage  {
         ElementActions.click(driver,deleteAccountButton);
         return this;
     }
-
-
 }
 

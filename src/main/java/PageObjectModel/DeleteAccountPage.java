@@ -11,7 +11,6 @@ public class DeleteAccountPage  {
 
     WebDriver driver;
      //locators---------------------
-
     public DeleteAccountPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -21,9 +20,6 @@ public class DeleteAccountPage  {
     //variables---------------
     String url ="https://automationexercise.com/delete_account";
 
-
-
-
     //actions-----------------------
     public DeleteAccountPage Navigate()
     {
@@ -31,8 +27,6 @@ public class DeleteAccountPage  {
         BrowserActions.navigate(driver, url);
         return this;
     }
-
-
 
     //validation--------------------------------------
     @Step("Assertion On Delete Account Page")
@@ -42,11 +36,4 @@ public class DeleteAccountPage  {
         Assert.assertTrue(ElementActions.getText(driver,accountDeletedMessage).contains("ACCOUNT DELETED!"), "The expected message isAccount Deleted! and the actual is " + ElementActions.getText(driver,accountDeletedMessage));
         return this;
     }
-
-
-
-
-
-
-
 }

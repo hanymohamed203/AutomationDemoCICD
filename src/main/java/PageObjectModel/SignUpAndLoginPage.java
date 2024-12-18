@@ -29,8 +29,6 @@ public class SignUpAndLoginPage {
         return this;
     }
 
-
-
     //actions-------------------------------------------
     public String GetSignUpText()
     {

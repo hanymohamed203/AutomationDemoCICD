@@ -39,7 +39,6 @@ public class RegistrationPage {
 
     String url ="https://automationexercise.com/signup";
 
-
     //actions-------------------------------
 
     public RegistrationPage navigate()
@@ -96,13 +95,6 @@ public class RegistrationPage {
         ElementActions.click(driver,createAccountButton);
         return this;
     }
-
-
-
-
-
-
-
 
     //validationss
     public RegistrationPage assertOnEnterAccountInformationPage() {

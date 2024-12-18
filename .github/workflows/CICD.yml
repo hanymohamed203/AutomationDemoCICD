@@ -11,6 +11,7 @@ on:
     - cron: '*/15 * * * *'
     
   pull_request:
+    description: ' test after pull request '
     branches:
       - main
 

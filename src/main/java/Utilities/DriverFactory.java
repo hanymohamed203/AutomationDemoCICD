@@ -40,7 +40,6 @@ public class DriverFactory {
             driver.manage().window().maximize();
             System.out.println("window is maximized , and the window size is " + driver.manage().window().getSize());
         }
-
         return driver;
     }
 }

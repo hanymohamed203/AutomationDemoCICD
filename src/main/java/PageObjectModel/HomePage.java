@@ -30,8 +30,6 @@ public class HomePage  {
         return this;
     }
 
-
-
     //validation-----------------------------
     @Step("Assertion On Home Page ")
     public HomePage assertionOnHomePage()
@@ -51,7 +49,4 @@ public class HomePage  {
         Assert.assertEquals(driver.findElement(userName).getText(),username);
         return this;
     }
-
-
-
 }

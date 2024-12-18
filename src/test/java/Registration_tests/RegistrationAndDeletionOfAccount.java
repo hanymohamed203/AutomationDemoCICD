@@ -16,15 +16,10 @@ import org.testng.annotations.Test;
 
 public class RegistrationAndDeletionOfAccount {
 
-
-
     boolean Newssletter = true;
     boolean specialOffer = true;
-
-
     private WebDriver driver;
     private JsonFileManager jsonFileManager;
-
     @BeforeClass
     @Description("Set up the browser")
     public void set_up() {
@@ -32,9 +27,6 @@ public class RegistrationAndDeletionOfAccount {
         driver= DriverFactory.initiateDriver(System.getProperty("browserName"), Boolean.parseBoolean(System.getProperty("MaximizeWindow")), Boolean.parseBoolean(System.getProperty("Headless")));
         jsonFileManager = new JsonFileManager("src/test/resources/JsonData.json");
     }
-
-
-
 
     @Test(description = "This test case used for verifying that the user can create new account and delete it")
     @Severity(SeverityLevel.CRITICAL)
@@ -64,9 +56,5 @@ public class RegistrationAndDeletionOfAccount {
     public void DeleteUserAndTearDown() {
         driver.close();
     }
-
-
-
-
 }
 
