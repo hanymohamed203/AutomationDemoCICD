@@ -1,6 +1,7 @@
 package Registration_tests;
 
 import PageObjectModel.*;
+import Utilities.BrowserActions;
 import Utilities.DriverFactory;
 import Utilities.JsonFileManager;
 import Utilities.PropertiesReader;
@@ -17,11 +18,14 @@ import org.testng.annotations.Test;
 import java.time.Instant;
 
 public class RegistrationAndDeletionOfAccount {
+
+    //Variables
     long time = System.currentTimeMillis();
     boolean Newssletter = true;
     boolean specialOffer = true;
     private WebDriver driver;
     private JsonFileManager jsonFileManager;
+
     @BeforeClass
     @Description("Set up the browser")
     public void set_up() {
@@ -34,7 +38,7 @@ public class RegistrationAndDeletionOfAccount {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Register and deletion of user")
     public void RegistrationAndDeletion() {
-        new HomePage(driver).navigate().assertionOnHomePage();
+        new HomePage(driver).navigateToHomePage().assertionOnHomePage();
         new MenuPage(driver).clickOnLoginORSignUpButton();
         new SignUpAndLoginPage(driver).assertOnLoginAndSignUpPage()
                 .signUp(jsonFileManager.getTestData("UserName"), time+jsonFileManager.getTestData("UserMail"))
@@ -56,7 +60,7 @@ public class RegistrationAndDeletionOfAccount {
     @AfterClass
     @Description("Tear down method")
     public void DeleteUserAndTearDown() {
-        driver.close();
+        BrowserActions.CloseTheBrowser(driver);
     }
 }
 

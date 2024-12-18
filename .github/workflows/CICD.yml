@@ -5,10 +5,10 @@ on:
     inputs:
       testsPath:
         description: 'Path to Tests to be Executed'
-        default: 'Registration_tests/RegistrationAndDeletionOfAccount.java'
+        default: 'Registration_tests.RegistrationAndDeletionOfAccount'
 
-  schedule:
-    - cron: '*/2 * * * *'
+  # schedule:
+  #  - cron: '*/50 * * * *'
     
   pull_request:
     description: ' test after pull request '
@@ -37,7 +37,7 @@ jobs:
 
       - name: Run Tests
         continue-on-error: true
-        run: mvn -DbrowserName="chrome" -Dtest="${{ github.event.inputs.testsPath || Registration_tests/RegistrationAndDeletionOfAccount.java }}" test
+        run: mvn -DbrowserName="chrome" -Dtest="${{ github.event.inputs.testsPath || Registration_tests.RegistrationAndDeletionOfAccount }}" test
       - name: Generate Allure Report
         continue-on-error: true
         run: mvn allure:report
@@ -77,7 +77,7 @@ jobs:
 
       - name: Run Tests in Headless in chrome
         continue-on-error: true
-        run: mvn -DbrowserName="chrome" -Dtest="${{ github.event.inputs.testsPath || Registration_tests/RegistrationAndDeletionOfAccount.java }}" test
+        run: mvn -DbrowserName="chrome" -Dtest="${{ github.event.inputs.testsPath || Registration_tests.RegistrationAndDeletionOfAccount }}" test
       - name: Generate Allure Report
         continue-on-error: true
         run: mvn allure:report

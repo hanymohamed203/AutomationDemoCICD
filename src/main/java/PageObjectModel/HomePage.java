@@ -23,7 +23,7 @@ public class HomePage  {
 
     String url="https://automationexercise.com/";
 
-    public HomePage navigate()
+    public HomePage navigateToHomePage()
     {
 
         BrowserActions.navigate(driver, url);

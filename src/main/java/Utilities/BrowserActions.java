@@ -12,9 +12,14 @@ public class BrowserActions {
         System.out.println("navigating to url: "+ url);
         driver.get(url);
     }
-    public static void Refresh()
+    public static void Refresh(WebDriver driver)
     {
         driver.navigate().refresh();
         System.out.println("the page is refreshed successfully ");
+    }
+    public static void CloseTheBrowser(WebDriver driver)
+    {
+        driver.quit();
+        System.out.println("the browser is closed successfully ");
     }
 }

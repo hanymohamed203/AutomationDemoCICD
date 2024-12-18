@@ -22,7 +22,7 @@ public class SignUpAndLoginPage {
 
     String url ="https://automationexercise.com/login";
 
-    public SignUpAndLoginPage Navigate()
+    public SignUpAndLoginPage NavigateToSignUpANdLoginPage()
     {
 
         BrowserActions.navigate(driver, url);
@@ -58,5 +58,4 @@ public class SignUpAndLoginPage {
         Assert.assertTrue(driver.getTitle().contains("Automation Exercise - Signup"));
         return this;
     }
-
 }
