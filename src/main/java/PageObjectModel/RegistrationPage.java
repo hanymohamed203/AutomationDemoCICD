@@ -41,7 +41,7 @@ public class RegistrationPage {
 
     //actions-------------------------------
 
-    public RegistrationPage navigate()
+    public RegistrationPage navigateToRegistrationPage()
     {
 
         BrowserActions.navigate(driver, url);
@@ -102,11 +102,4 @@ public class RegistrationPage {
         Assert.assertTrue(driver.getCurrentUrl().contains("signup"), "The expected Url contains 'signup' and the actual one " + driver.getCurrentUrl());
         return this;
     }
-
-
-
-
-
-
-
 }

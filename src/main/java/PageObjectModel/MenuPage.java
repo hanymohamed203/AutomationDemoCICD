@@ -15,7 +15,6 @@ public class MenuPage  {
     private By loginAndRegistrationButton = By.cssSelector("a[href='/login']");
     private By deleteAccountButton = By.cssSelector("a[href='/delete_account']");
 
-
     //Actions------------------------------------------------------
 
     public MenuPage clickOnLoginORSignUpButton()
@@ -24,6 +23,7 @@ public class MenuPage  {
         ElementActions.click(driver,loginAndRegistrationButton);
         return this;
     }
+
     public MenuPage clickOnDeleteAccountButton()
     {
         ElementActions.click(driver,deleteAccountButton);

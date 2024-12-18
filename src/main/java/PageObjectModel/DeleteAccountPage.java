@@ -21,7 +21,7 @@ public class DeleteAccountPage  {
     String url ="https://automationexercise.com/delete_account";
 
     //actions-----------------------
-    public DeleteAccountPage Navigate()
+    public DeleteAccountPage NavigateOnDeleteAccountPage()
     {
 
         BrowserActions.navigate(driver, url);

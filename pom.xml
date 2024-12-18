@@ -50,6 +50,8 @@
             <version>1.9.22.1</version>
             <scope>runtime</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+
     </dependencies>
     <build>
         <pluginManagement>
