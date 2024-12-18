@@ -14,8 +14,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-public class RegistrationAndDeletionOfAccount {
+import java.time.Instant;
 
+public class RegistrationAndDeletionOfAccount {
+    long time = System.currentTimeMillis();
     boolean Newssletter = true;
     boolean specialOffer = true;
     private WebDriver driver;
@@ -35,7 +37,7 @@ public class RegistrationAndDeletionOfAccount {
         new HomePage(driver).navigate().assertionOnHomePage();
         new MenuPage(driver).clickOnLoginORSignUpButton();
         new SignUpAndLoginPage(driver).assertOnLoginAndSignUpPage()
-                .signUp(jsonFileManager.getTestData("UserName"), jsonFileManager.getTestData("UserMail"))
+                .signUp(jsonFileManager.getTestData("UserName"), time+jsonFileManager.getTestData("UserMail"))
                 .clickOnSignUpButton();
         new RegistrationPage(driver).assertOnEnterAccountInformationPage()
                 .chooseGender(jsonFileManager.getTestData("AccountInformation.UserGender"))
